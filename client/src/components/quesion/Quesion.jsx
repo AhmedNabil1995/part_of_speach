@@ -10,43 +10,43 @@ const Quesion = () => {
   let [score,setScore] = useState(0);
   let options = useRef()
   let [timeLeft,setTimeLeft] = useState(10);
-  var timer;
+  let timer = useRef()
   let navigate = useNavigate()
 
   useEffect(()=>{
     const getQuesions = async()=>{
       let res = await axios.get('http://localhost:5000/quesions');
       setQuesions(res.data);
-      if(!timer)
-      startTimer()
+
+        startTimer()
+
     }
     getQuesions()
   },[])
 
 
   const startTimer=()=>{
+
     let time=10;
     setTimeLeft(time);
-    /* timer = setInterval(()=>{
+    if(timer.current) return
+    timer.current = setInterval(()=>{
       if(time>0){
         setTimeLeft(--time);
       }else{
-        clearInterval(timer);
-        setShowNextBtn(true)
-        addDisableClass()
+        stopTimer()
+        getNextQuesionOrEndQuiz();
       }
-      console.log(timer)
-    },1000) */
+    },1000)
+
   }
 
 
   const nextQuesion =()=>{
-    if(currentQuesionNum<quesions.length){
-      setCurrentQuesionNum(currentQuesionNum+1);
+      setCurrentQuesionNum(++currentQuesionNum);
       removeClasses();
       setShowNextBtn(false)
-      startTimer()
-  }
+      startTimer()  
   }
 
   const removeClasses =()=>{
@@ -63,10 +63,15 @@ const Quesion = () => {
     })
   }
 
-  const selectAnswer=(e)=>{
-    console.log(timer)
-    clearInterval(timer)
+  const stopTimer =()=>{
+    clearInterval(timer.current);
+    timer.current = undefined;
     addDisableClass()
+  }
+
+  const selectAnswer=(e)=>{
+    
+    stopTimer()
 
     if(e.target.textContent === quesions[currentQuesionNum-1]['pos']){
       e.target.classList.add('correctAnswer');
@@ -75,9 +80,13 @@ const Quesion = () => {
       e.target.classList.add('wrongAnswer');
     }
 
+    getNextQuesionOrEndQuiz()
+   
+  }
 
+  function getNextQuesionOrEndQuiz(){
+ 
     if(currentQuesionNum===quesions.length){
-
       setTimeout(() => {
         localStorage.setItem('score',score)
         navigate('/result')
