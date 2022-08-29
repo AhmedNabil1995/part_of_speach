@@ -1,0 +1,29 @@
+.rules_title{
+    font-size: 20px;
+    font-weight: bold;
+    border-bottom: 2px solid #ddd;
+    padding: 10px 0;
+}
+
+.rules_body{
+    padding: 10px 0;
+}
+
+.rule{
+    margin-bottom: 5px;
+}
+
+.rule span{
+    color: steelblue;
+    font-weight: 500;
+}
+
+.rules_footer{
+    height: 80px;
+    border-top: 2px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+}
+

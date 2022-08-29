@@ -1,0 +1,85 @@
+body{
+    position: relative;
+    font-family: cursive;
+    width: 100%;
+    min-height: 100vh;
+    background-color: steelblue;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.model{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px 20px 0;
+    box-shadow: 1px 1px 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.btn{
+    font-size: 18px;
+    text-transform: capitalize;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.outline{
+    border: 2px solid steelblue;
+    color: steelblue;
+    background-color: white;
+}
+
+.outline:hover{
+    background-color: steelblue;
+    color: white;
+}
+
+.solid{
+    border: 2px solid steelblue;
+    color: white;
+    background-color: steelblue;
+}
+
+.solid:hover{
+    background-color: white;
+    color: steelblue;
+}
+
+.primary{
+    border: 2px solid darkblue;
+    color: white;
+    background-color: darkblue;
+}
+
+.primary:hover{
+    background-color: white;
+    color: darkblue;
+}
+
+.correctAnswer{
+    background-color: chartreuse !important;
+    color: white;
+}
+.wrongAnswer{
+    background-color: red !important;
+    color: white;
+}
+
+.disableSelection{
+    pointer-events: none;
+    cursor: initial !important;
+}

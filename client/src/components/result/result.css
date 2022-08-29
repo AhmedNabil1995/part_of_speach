@@ -1,0 +1,41 @@
+.result_container{
+    padding: 30px;
+    width: 450px;
+    max-width: 100%;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+    display: flex;
+}
+
+.result_icon i{
+    font-size: 100px;
+    color: royalblue;
+}
+.result_final{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 30px;
+}
+.result_btn_group{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.result_btn_group button{
+        font-size: 18px;
+        font-weight: bold;
+        text-transform: capitalize;
+        color: #fff;
+        background-color: royalblue;
+        border: none;
+        outline: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+}
+.result_btn_group button:hover{
+    background-color: rgb(134, 158, 230);
+}
