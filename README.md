@@ -27,10 +27,10 @@ it has the most features in this app
 first you can see a timer that count from 10 to 0, 
 a quesion with 4 answer,
 a progress bar that shows your progress, and below you can see which question you are in now and a button that allow you to go to next quesion
-##### .For every question, you must choose one answer before the timer goes off (see picture 1)
-##### .if your answer is correct, it feedbacks you that you chose the correct answer (see picture 2), and the next button will appear
-##### .if your answer is not correct, it feedbacks you that you chose a wrong answer (see picture 3), and the next button will appear
-##### .if the time goes off you can,t choose any answer and the next button will appear
++ For every question, you must choose one answer before the timer goes off (see picture 1)
++ if your answer is correct, it feedbacks you that you chose the correct answer (see picture 2), and the next button will appear
++ if your answer is not correct, it feedbacks you that you chose a wrong answer (see picture 3), and the next button will appear
++ if the time goes off you can,t choose any answer (see picture 4), and the next button will appear
 
 
 <div>
