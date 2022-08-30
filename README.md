@@ -22,8 +22,17 @@ Examples of part of speech: (noun, verb, adjective, ...)
 
 ## Quesion Screen
 
-#### this Screen is the main Screen
-##### it
+this Screen is the main Screen
+it has the most features in this app
+first you can see a timer that count from 10 to 0, 
+a quesion with 4 answer,
+a progress bar that shows your progress, and below you can see which question you are in now and a button that allow you to go to next quesion
+##### .For every question, you must choose one answer before the timer goes off (see picture 1)
+##### .if your answer is correct, it feedbacks you that you chose the correct answer (see picture 2), and the next button will appear
+##### .if your answer is not correct, it feedbacks you that you chose a wrong answer (see picture 3), and the next button will appear
+##### .if the time goes off you can,t choose any answer and the next button will appear
+
+
 <div>
 <img src="https://user-images.githubusercontent.com/108214255/187409625-b4527623-f98a-460f-9a93-68543fab9ef8.png" width="400" height="282">
 <img src="https://user-images.githubusercontent.com/108214255/187409678-70a6b963-5020-4d31-a989-8b3e30ba0ecc.png" width="400">
