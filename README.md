@@ -3,27 +3,29 @@
 ### this is an app for english students to help them categorized words according to their syntactic functions, which is known as "Part of Speech".
 Examples of part of speech: (noun, verb, adjective, ...)
 
-## first how to setup this App
+## first how to Setup this App
 after you download client and server folders open them in vs code then.
 
 * open a new terminal and write these code to install all packages used in this APP
 ```
 cd client
 npm i
+npm start
 ```
 ```
 cd server
 npm i
+npm start
 ```
-
-for client side there is two packages are used beside react
+now your app is ready to use, and if there is any problem with some packages that aren't installed, you can install it manually
+for client-side there is two packages are used besides react
 * react-router
 * axios
 ```
 npm install react-router-dom@6 axios
 ```
 
-for server side there is three packages are installed
+for server-side there is three packages are installed
 * express
 * dotenv
 * cors
